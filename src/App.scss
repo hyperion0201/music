@@ -1,0 +1,93 @@
+@font-face {
+  font-family: SFProRounded;
+  src: url("./assets/sfproroundedmedium.ttf");
+}
+body {
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+}
+* {
+  box-sizing: border-box;
+  font-family: SFProRounded;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.App {
+  min-height: 100vh;
+  padding: 120px 0;
+  color: #101010;
+  text-align: center;
+}
+.Album {
+  margin: 0;
+}
+.Now-Playing{
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px;
+}
+.Song-Thumbnail {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: spin 10s linear infinite;
+}
+.Song-Thumbnail-Spin-Pause {
+  animation-play-state: paused;
+}
+.Song-Title {
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+
+.Singer {
+  color: rgb(0, 0, 0);
+}
+
+.Control-Button-Group {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > * {
+    cursor: pointer;
+  }
+}
+
+.Prev-Button,
+.Next-Button {
+  width: 20px;
+}
+
+.Pause-Play-Button {
+  display: flex;
+  justify-content: center;
+  width: 14px;
+  height: 22px;
+  margin: 0 32px;
+
+  svg {
+    height: 22px;
+  }
+}
+.Seek-Area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
